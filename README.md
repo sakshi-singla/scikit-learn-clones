@@ -10,4 +10,7 @@ Algorithms implemented:
 3.> Naive Bayes<br>
 4.> Decision Trees<br>
 5.> Random Forest<br>
-5.> k-means clustering 
+5.> k-means clustering <br>
+6.> Feature importance (Permutation and Drop Column Importance)<br>
+
+
