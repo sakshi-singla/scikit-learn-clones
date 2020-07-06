@@ -1,0 +1,89 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.1, pytest-4.0.2, py-1.7.0, pluggy-0.8.0 -- /Users/parrt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/parrt/grading/msds621/F19/bayes-sakshi-singla, inifile:
+plugins: remotedata-0.3.1, openfiles-0.3.1, doctestplus-0.2.0, arraydiff-0.3
+collecting ... collected 3 items
+
+test_hidden.py::test_load FAILED                                         [ 33%]
+test_hidden.py::test_training_error FAILED                               [ 66%]
+test_hidden.py::test_kfold_sklearn_vs_621 FAILED                         [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_load ___________________________________
+
+    def test_load():
+>       sport, tech = load()
+
+test_hidden.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_hidden.py:57: in load
+    sport = load_docs(sport_dir)
+bayes.py:130: in load_docs
+    fileStr = f.read()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <encodings.utf_8.IncrementalDecoder object at 0x1a205a05c0>
+input = b'Chelsea sack Mutu\n\nChelsea have sacked Adrian Mutu after he failed a drugs test.\n\nThe 25-year-old tested positiv...l performance. The Football Association has yet to act on Mutu\'s failed drugs test and refuses to discuss his case.\n'
+final = True
+
+    def decode(self, input, final=False):
+        # decode input (taking the buffer into account)
+        data = self.buffer + input
+>       (result, consumed) = self._buffer_decode(data, self.errors, final)
+E       UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 257: invalid start byte
+
+../../../../anaconda3/lib/python3.7/codecs.py:322: UnicodeDecodeError
+_____________________________ test_training_error ______________________________
+
+    def test_training_error():
+>       V, X, y = training_data()
+
+test_hidden.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_hidden.py:63: in training_data
+    sport, tech = load()
+test_hidden.py:57: in load
+    sport = load_docs(sport_dir)
+bayes.py:130: in load_docs
+    fileStr = f.read()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <encodings.utf_8.IncrementalDecoder object at 0x1a208305f8>
+input = b'Chelsea sack Mutu\n\nChelsea have sacked Adrian Mutu after he failed a drugs test.\n\nThe 25-year-old tested positiv...l performance. The Football Association has yet to act on Mutu\'s failed drugs test and refuses to discuss his case.\n'
+final = True
+
+    def decode(self, input, final=False):
+        # decode input (taking the buffer into account)
+        data = self.buffer + input
+>       (result, consumed) = self._buffer_decode(data, self.errors, final)
+E       UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 257: invalid start byte
+
+../../../../anaconda3/lib/python3.7/codecs.py:322: UnicodeDecodeError
+__________________________ test_kfold_sklearn_vs_621 ___________________________
+
+    def test_kfold_sklearn_vs_621():
+>       V, X, y = training_data()
+
+test_hidden.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_hidden.py:63: in training_data
+    sport, tech = load()
+test_hidden.py:57: in load
+    sport = load_docs(sport_dir)
+bayes.py:130: in load_docs
+    fileStr = f.read()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <encodings.utf_8.IncrementalDecoder object at 0x1a20a6abe0>
+input = b'Chelsea sack Mutu\n\nChelsea have sacked Adrian Mutu after he failed a drugs test.\n\nThe 25-year-old tested positiv...l performance. The Football Association has yet to act on Mutu\'s failed drugs test and refuses to discuss his case.\n'
+final = True
+
+    def decode(self, input, final=False):
+        # decode input (taking the buffer into account)
+        data = self.buffer + input
+>       (result, consumed) = self._buffer_decode(data, self.errors, final)
+E       UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 257: invalid start byte
+
+../../../../anaconda3/lib/python3.7/codecs.py:322: UnicodeDecodeError
+=========================== 3 failed in 0.53 seconds ===========================

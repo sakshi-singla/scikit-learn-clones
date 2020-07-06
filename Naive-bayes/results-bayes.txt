@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.1, pytest-4.0.2, py-1.7.0, pluggy-0.8.0 -- /Users/parrt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/parrt/grading/msds621/F19/bayes-sakshi-singla, inifile:
+plugins: remotedata-0.3.1, openfiles-0.3.1, doctestplus-0.2.0, arraydiff-0.3
+collecting ... collected 10 items
+
+test_bayes.py::test_load PASSED                                          [ 10%]
+test_bayes.py::test_vocab PASSED                                         [ 20%]
+test_bayes.py::test_vectorize_docs PASSED                                [ 30%]
+test_bayes.py::test_vectorize PASSED                                     [ 40%]
+test_bayes.py::test_simple_docs_error PASSED                             [ 50%]
+test_bayes.py::test_unknown_words_vectorize PASSED                       [ 60%]
+test_bayes.py::test_unknown_words_training_error PASSED                  [ 70%]
+test_bayes.py::test_training_error PASSED                                [ 80%]
+test_bayes.py::test_kfold_621 PASSED                                     [ 90%]
+test_bayes.py::test_kfold_sklearn_vs_621 PASSED                          [100%]
+
+========================== 10 passed in 31.59 seconds ==========================
